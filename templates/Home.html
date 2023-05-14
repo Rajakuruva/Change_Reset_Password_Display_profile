@@ -1,0 +1,13 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Home-Page</title>
+{% endblock %}
+
+{% block body_block %}
+    {% if username %}
+        <h1 class="h1 text-white mt-5">WELCOME TO HOME_PAGE {{username}}</h1>
+        <a href="{% url 'Change_password' %}">Change_password</a>
+    {% else %}
+        <h1 class="h1 text-white mt-5">WELCOME TO HOME_PAGE</h1>
+    {% endif %}
+{% endblock %}

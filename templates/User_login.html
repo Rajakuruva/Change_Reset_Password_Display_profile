@@ -1,0 +1,26 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>User_Login</title>
+<style>
+    center
+    {
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<form method="POST">
+    {% csrf_token %}
+    <label for="username" class="mt-3">username</label>
+    <input type="text" name="username" id="username">
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password">
+    <br><br>
+    <a href="{% url 'Forgot_Password' %}">Forgot_Password</a>
+    <br><br>
+    <input type="submit" value="User_Login">
+</form>
+{% endblock %}
